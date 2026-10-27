@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+.app-background { min-height: 100vh; background: #f5f7fb; }
+.app-container { padding-top: 38px; padding-bottom: 24px; }
+.page-header { margin-bottom: 28px; gap: 18px; }
+.eyebrow { margin: 0 0 7px; color: #858ba1; font-size: 10px; font-weight: 800; letter-spacing: 1.8px; }
+.page-title { font-size: clamp(32px, 5vw, 44px) !important; line-height: 1.15 !important; margin-bottom: 6px !important; }
+.page-title span { color: #6257e8; }
+.local-chip { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: #fff; border: 1px solid #e5e8f1; border-radius: 30px; color: #626b80; font-size: 12px; white-space: nowrap; }
+.score-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 20px; }
+.score-card { border-color: #e7eaf2 !important; box-shadow: 0 3px 12px rgba(30, 41, 80, .025) !important; }
+.score-card .MuiCardContent-root { padding: 17px !important; }
+.score-card .MuiCardContent-root:last-child { padding-bottom: 17px !important; }
+.score-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(290px, .75fr); gap: 20px; align-items: start; }
+.panel { padding: 24px; border-color: #e7eaf2 !important; box-shadow: 0 3px 12px rgba(30, 41, 80, .025) !important; min-width: 0; }
+.turn-banner { display: flex; align-items: center; gap: 12px; padding: 13px; margin-bottom: 20px; background: #f5f3ff; border: 1px solid #e5e0ff; border-radius: 12px; }
+.turn-banner.finished { background: #edfaf4; border-color: #c9efdf; }
+.turn-token { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 11px; color: white; background: #6257e8; font-size: 21px; font-weight: 800; flex-shrink: 0; }
+.turn-token.token-o { background: #159b81; }
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; width: min(100%, 390px); margin: 0 auto; }
+.cell.MuiButton-root { aspect-ratio: 1; min-width: 0; padding: 0; border: 1px solid #e6e8f2; border-radius: 13px; background: #fafaff; color: #6257e8; font-size: clamp(36px, 7vw, 58px); font-weight: 800; font-family: "Inter", sans-serif; transition: background .15s, transform .15s, border-color .15s; }
+.cell.MuiButton-root:hover { background: #f0eeff; border-color: #bcb5ff; transform: translateY(-1px); }
+.cell.MuiButton-root.cell-o { color: #159b81; }
+.cell.MuiButton-root.cell-winning { color: #137852; background: #ddf8ea; border: 2px solid #83d7b1; }
+.cell.Mui-disabled { color: inherit; opacity: 1; }
+.cell.Mui-disabled.cell-x { color: #6257e8; }
+.cell.Mui-disabled.cell-o { color: #159b81; }
+.game-note { margin-top: 15px !important; color: #858ba1; font-size: 12px !important; text-align: center; }
+.history-panel { min-height: 370px; }
+.move-count { color: #6257e8; background: #f0eeff; border-radius: 20px; padding: 6px 10px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.history-table .MuiTableCell-root { border-bottom-color: #eff1f6; padding: 12px 7px; font-size: 12px; }
+.history-table .MuiTableHead-root .MuiTableCell-root { color: #858ba1; font-size: 10px; font-weight: 800; }
+.empty-history { min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #9299ab; text-align: center; }
+.page-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid #e5e8f0; margin-top: 24px; padding-top: 18px; color: #9299ab; }
+.alert-actions { display: flex; gap: 8px; }
+.alert-actions button { border: 0; padding: 5px 8px; background: transparent; color: white; font-weight: 800; cursor: pointer; }
+@media (max-width: 760px) {
+  .app-container { padding-top: 24px; }
+  .score-grid { gap: 8px; }
+  .score-card .MuiCardContent-root { padding: 11px !important; }
+  .score-icon { width: 34px; height: 34px; }
+  .score-card .MuiTypography-h4 { font-size: 25px; }
+  .content-grid { grid-template-columns: 1fr; }
+  .panel { padding: 17px; }
+  .local-chip { align-self: flex-start; }
+}
+@media (max-width: 420px) {
+  .score-icon { display: none; }
+  .score-card .MuiCardContent-root { padding: 10px !important; }
+  .score-card .MuiTypography-caption { font-size: 9px; }
+  .page-footer { align-items: flex-start; flex-direction: column; }
+}
